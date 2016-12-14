@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM 
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+ 
+<hibernate-configuration>
+   <session-factory>
+   <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+   <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+   <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/runningfx</property>
+   <property name="hibernate.connection.username">root</property>
+   <property name="hibernate.connection.password">PowerEdgeT310</property>
+   <property name="show_sql">true</property>
+   <property name="hibernate.current_session_context_class">thread</property>
+   <mapping class="astrolabe31.runningfx.model.Running"/>
+    <!-- Properties for Hibernate -->
+         <!-- la property suivante permet la création/suppression des bases sql,
+         values=
+         "create" pour créer et detuire l'éxistant.
+         "create-drop" pour créer et supprimer à la fin de session.
+         "update" maj du schema.
+         "validate" valide le schema mais pas de changement en base  
+   <property name="hibernate.hbm2ddl.auto"> update</property> -->
+</session-factory>
+</hibernate-configuration>
+      
+   
+           
+            
+

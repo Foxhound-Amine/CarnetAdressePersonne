@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="226.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="astrolabe31.runningfx.controller.PersonEditDialogController">
+   <children>
+      <GridPane alignment="TOP_CENTER" layoutX="-244.0" layoutY="-215.0" prefHeight="139.0" prefWidth="590.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="%person.firstname" />
+            <Label text="%person.lastname" GridPane.rowIndex="1" />
+            <Label text="%person.street" GridPane.rowIndex="2" />
+            <Label text="%person.city" GridPane.rowIndex="3" />
+            <Label text="%person.codepostal" GridPane.rowIndex="4" />
+            <Label text="%person.birthday" GridPane.rowIndex="5" />
+            <TextField fx:id="firstNameField" GridPane.columnIndex="1" />
+            <TextField fx:id="lastNameField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="streetField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="cityField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="postalCodeField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="birthdayField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+         </children>
+      </GridPane>
+      <HBox layoutX="341.0" layoutY="174.0" prefHeight="31.0" prefWidth="193.0" AnchorPane.topAnchor="174.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#handleOk" text="%person.ok">
+               <HBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </HBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#handleCancel" text="%person.cancel" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

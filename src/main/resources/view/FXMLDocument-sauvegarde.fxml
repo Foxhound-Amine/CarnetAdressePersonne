@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" stylesheets="@../../../../target/classes/styles/caspian-rgt.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="astrolabe31.runningfx.controller.FXMLDocumentController">
+    <children>
+      <SplitPane dividerPositions="0.29797979797979796" prefHeight="600.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <TableView fx:id="personTable" layoutX="13.0" layoutY="7.0" prefHeight="552.0" prefWidth="227.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columns>
+                      <TableColumn id="firstNameColumn" fx:id="firstNameColumn" prefWidth="75.0" text="firstName" />
+                      <TableColumn id="lastNameColumn" fx:id="lastNameColumn" prefWidth="75.0" text="lastNameColumn" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="158.0" prefWidth="318.0">
+               <children>
+                  <BorderPane prefHeight="598.0" prefWidth="557.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <left>
+                        <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Label prefHeight="26.0" prefWidth="100.0" text="%key.titre" />
+                              <Label layoutX="10.0" layoutY="10.0" prefHeight="26.0" prefWidth="100.0" text="%key.fichier" />
+                              <Label layoutX="10.0" layoutY="10.0" prefHeight="26.0" prefWidth="100.0" text="%key.pays" />
+                              <Label layoutX="10.0" layoutY="166.0" prefHeight="71.0" prefWidth="100.0" text="%key.commentaire" />
+                              <Label layoutX="10.0" layoutY="10.0" prefHeight="26.0" prefWidth="100.0" text="%key.latitude" />
+                              <Label layoutX="10.0" layoutY="36.0" prefHeight="26.0" prefWidth="100.0" text="%key.longitude" />
+                              <Label layoutX="10.0" layoutY="62.0" prefHeight="26.0" prefWidth="100.0" text="%key.elevation" />
+                              <Label layoutX="10.0" layoutY="88.0" prefHeight="26.0" prefWidth="100.0" text="%key.time" />
+                              <Separator prefHeight="16.0" prefWidth="100.0" />
+                              <Label layoutX="10.0" layoutY="192.0" prefHeight="30.0" prefWidth="100.0" text="%key.distance" />
+                              <Label layoutX="10.0" layoutY="221.0" prefHeight="31.0" prefWidth="100.0" text="%key.dureesortie" />
+                              <Label text="%person.firstname" />
+                              <Label text="%person.lastname" />
+                              <Label text="%person.street" />
+                              <Label text="%person.city" />
+                              <Label text="%person.codepostal" />
+                              <Label text="%person.birthday" />
+                           </children>
+                        </VBox>
+                     </left>
+                     <center>
+                        <VBox prefHeight="100.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <TextField promptText="%key.titre" />
+                              <TextField promptText="%key.fichier" />
+                              <ChoiceBox prefHeight="25.0" prefWidth="306.0" />
+                              <TextArea prefHeight="73.0" prefWidth="243.0" promptText="%key.commentaire" />
+                              <TextField fx:id="pays" layoutX="10.0" layoutY="110.0" promptText="%key.latitude" />
+                              <TextField layoutX="10.0" layoutY="135.0" promptText="%key.longitude" />
+                              <TextField layoutX="10.0" layoutY="160.0" promptText="%key.elevation" />
+                              <TextField promptText="%key.time" />
+                              <Separator prefHeight="39.0" prefWidth="303.0" />
+                              <TextField layoutX="10.0" layoutY="60.0" promptText="%key.distance" />
+                              <TextField layoutX="10.0" layoutY="213.0" promptText="%key.dureesortie" />
+                              <Label fx:id="firstNameLabel" text="Label" />
+                              <Label fx:id="lastNameLabel" text="Label" />
+                              <Label fx:id="streetLabel" text="Label" />
+                              <Label fx:id="cityLabel" text="Label" />
+                              <Label fx:id="postalCodeLabel" text="Label" />
+                              <Label fx:id="birthdayLabel" text="Label" />
+                           </children>
+                        </VBox>
+                     </center>
+                     <right>
+                        <VBox prefHeight="524.0" prefWidth="0.0" BorderPane.alignment="CENTER" />
+                     </right>
+                     <bottom>
+                        <HBox prefHeight="38.0" prefWidth="557.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#handleNewPerson" text="%key.new" />
+                              <Button mnemonicParsing="false" onAction="#handleEditPerson" text="%key.edit" />
+                              <Button mnemonicParsing="false" onAction="#handleDeletePerson" text="%key.delete" />
+                           </children>
+                        </HBox>
+                     </bottom>
+                  </BorderPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+    </children>
+</AnchorPane>

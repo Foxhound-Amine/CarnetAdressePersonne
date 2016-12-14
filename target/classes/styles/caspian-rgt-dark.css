@@ -1,0 +1,31 @@
+/*
+ * Copyright (c) 2009, 2015, Oracle and/or its affiliates. All rights reserved.
+ * ORACLE PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
+ *
+ *
+ *
+ */
+
+/*******************************************************************************
+ *                                                                             *
+ * Ajout RGT origine http://code.makery.ch/library/javafx-8-tutorial/fr/part4/ *
+ *            
+ *                                                                             *
+ ******************************************************************************/
+.background {
+    -fx-background-color: #1d1d1d;
+}
+
+.label {
+    -fx-font-size: 11pt;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-text-fill: white;
+    -fx-opacity: 0.6;
+}
+
+.label-bright {
+    -fx-font-size: 11pt;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-text-fill: white;
+    -fx-opacity: 1;
+}

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="1.0"
+    xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd">
+   
+      <persistence-unit name="MyAppfxPU" transaction-type="RESOURCE_LOCAL">
+ 	  
+ 	  <!--  <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>	 -->
+      <!--    <provider>org.hibernate.ejb.HibernatePersistence</provider>  --> 
+      <!--   <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>  --> 
+     <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+      <!-- Entites [5] -->
+      <!--  <class>astrolabe31.runningfx.model.Running</class> -->
+      <!--  <class>astrolabe31.runningfx.model.Eleve</class> -->
+      
+      <properties>
+      
+            <!-- Login et password [4] -->
+            <property name="javax.persistence.jdbc.password" value="PowerEdgeT310" />
+            <property name="javax.persistence.jdbc.user" value="root" />
+
+            <!-- MySQL [2] -->
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+
+            <!-- Adresse [3] --> 
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/runningfx" />
+
+            
+           
+            
+         <!-- Properties for Hibernate -->
+         <!-- la property suivante permet la création/suppression des bases sql,
+         values=
+         "create" pour créer et detuire l'éxistant.
+         "create-drop" pour créer et supprimer à la fin de session.
+         "update" maj du schema.
+         "validate" valide le schema mais pas de changement en base  -->
+         <property name="hibernate.hbm2ddl.auto" value="create" />
+         <property name="hibernate.show_sql" value="true"/>
+         <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect"/>
+         
+
+         
+      </properties>
+   </persistence-unit>
+</persistence>
